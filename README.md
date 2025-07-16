@@ -67,7 +67,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/sathish103/Netflixapp.git'
+                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/nandini1620/Netflixapp.git'
             }
         }
         stage("Sonarqube Analysis") {
@@ -113,8 +113,8 @@ pipeline {
             steps{
                 script {
                     withDockerRegistry(credentialsId: 'docker-creds', toolName: 'docker'){   
-                    sh "docker tag netflix sathish103/netflix:latest "
-                    sh "docker push sathish103/netflix:latest"
+                    sh "docker tag netflix nandini1620/netflix:latest "
+                    sh "docker push nandini1620/netflix:latest"
                     }
                 }
             }
