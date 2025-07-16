@@ -67,7 +67,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/nandini1620/Netflixapp.git'
+                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/nandinimandli/netflixapp-clone.git'
             }
         }
         stage("Sonarqube Analysis") {
